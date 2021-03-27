@@ -1,0 +1,181 @@
+*{ /* Every Element */
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	transition: all 0.1s ease;
+}
+body, html{
+	height: 100%;
+	width: 100%;
+	/*background: rgb(242, 242, 242);*/
+}
+.container{
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+	/*border: 3px solid black;*/
+	background-color: hsl(185, 75%, 39%);
+}
+/* ------------------------------------------------ */
+
+/* ------------- Background Image ----------------- */
+.top-bkg{
+	position: absolute;
+	width: 100%;
+	height: 50%;
+	/*border: 2px solid red;*/
+	overflow: hidden;
+}
+.top-bkg img{
+	position: absolute;
+	width: 110%;
+	height: 120%;
+	left: -50%;
+	top: -60%;
+}
+.bottom-bkg{
+	position: absolute;
+	width: 100%;
+	height: 50%;
+	/*border: 2px solid green;*/
+	bottom: 0%;
+	overflow: hidden;
+}
+.bottom-bkg img{
+	position: absolute;
+	width: 110%;
+	height: 120%;
+	right: -50%;
+	bottom: -60%;
+}
+/* ------------- Background Image ----------------- */
+
+/* ------------- Profile Box ----------------- */
+.profile-box{
+	position: absolute;
+	width: 90%;
+	height: 400px;
+	/*border: 3px solid black;*/
+	border-radius: 15px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+}
+.profile-bkg{
+	position: relative;
+	width: 100%;
+	height: 150px;
+	background-image: url(images/bg-pattern-card.svg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.profile-data{
+	position: relative;
+	width: 100%;
+	height: 250px;
+	background-color: white;
+}
+.profile-pic{
+	position: absolute;
+	width: 120px;
+	height: 120px;
+	/*border: 1px solid red;*/
+	border-radius: 50%;
+	top: -20%;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: white;
+}
+.profile-pic::before{
+	position: absolute;
+	content: "";
+	width: 105px;
+	height: 105px;
+	/*border: 1px solid red;*/
+	border-radius: 50%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	background-image: url(images/image-victor.jpg);
+	background-size: contain;;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.profile-info{
+	width: 100%;
+	height: 165px;
+	border-bottom: 1px solid lightgray;
+	text-align: center;
+}
+.profile-info p{
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -45%);
+	font-size: 18px;
+	font-family: 'Kumbh Sans', sans-serif;
+	font-weight: 700;
+	line-height: 25px;
+}
+.profile-info span{
+	color: gray;
+	font-size: 15px;
+	font-weight: 300;
+}
+
+/* ------------- Profile Statistics ----------*/
+.profile-statistics{
+	position: relative;
+	width: 100%;
+	height: 85px;
+	/*border: 1px solid red;*/
+	display: flex;
+}
+.box{
+	width: 33.3%;
+	height: 100%;
+	/*border: 1px solid black;*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.box p{
+	font-size: 18px;
+	font-family: 'Kumbh Sans', sans-serif;
+	font-weight: 700;
+}
+.box span{
+	color: gray;
+	font-size: 10px;
+	font-weight: 300;
+}
+/* ------------- Profile Statistics ----------*/
+/* ------------- Profile Box ----------------- */
+
+/* ------------- Responsive Design---------------- */
+/* max-width, um x altura para baixo */
+/* min-width, um x altura para cima */
+
+@media screen and (min-width: 650px){
+	.top-bkg img{
+		left: -50%;
+		top: -200%;
+		width: 100%;
+		height: 300%;
+	}
+	.bottom-bkg img{
+		width: 100%;
+		height: 300%;
+		right: -50%;
+		bottom: -200%;
+	}
+	.profile-box{
+		width: 30%;
+	}
+
+}
+/* ------------- Responsive Design---------------- */
