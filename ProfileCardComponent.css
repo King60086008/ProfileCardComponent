@@ -28,7 +28,7 @@ body, html{
 }
 .top-bkg img{
 	position: absolute;
-	width: 110%;
+	width: 100%;
 	height: 120%;
 	left: -50%;
 	top: -60%;
@@ -43,7 +43,7 @@ body, html{
 }
 .bottom-bkg img{
 	position: absolute;
-	width: 110%;
+	width: 100%;
 	height: 120%;
 	right: -50%;
 	bottom: -60%;
@@ -160,22 +160,42 @@ body, html{
 /* max-width, um x altura para baixo */
 /* min-width, um x altura para cima */
 
-@media screen and (min-width: 650px){
-	.top-bkg img{
-		left: -50%;
-		top: -200%;
-		width: 100%;
-		height: 300%;
-	}
-	.bottom-bkg img{
-		width: 100%;
-		height: 300%;
-		right: -50%;
-		bottom: -200%;
-	}
+/* Ipad */
+@media screen and (min-width: 360px){
 	.profile-box{
-		width: 30%;
+		width: 60%;
+		height: 400px;
+		/*border: 1px solid black;*/
 	}
-
+	.profile-bkg{
+		height: 125px;
+	}
+	.profile-data{
+		height: 275px;
+	}
+	.profile-pic{
+		width: 100px;
+		height: 100px;
+	}
+	.profile-pic:before{
+		width: 80px;
+		height: 80px;
+	}
+	.profile-info{
+		height: 200px;
+	}
+	.profile-statistics{
+		height: 50px;
+	}
+	.profile-info p, .profile-info span{
+		font-size: 17px;
+		line-height: 25px;
+	}
+	.box p{
+		font-size: 18px;
+	}
+	.box span{
+		font-size: 10px;
+	}
 }
 /* ------------- Responsive Design---------------- */
